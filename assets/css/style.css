@@ -1,0 +1,45 @@
+body {
+    text-align: center;
+    margin: 180px 300px 0;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+p {
+    font-size: 32px;
+}
+
+li {
+    margin: 3px;
+}
+
+.start-button {
+    border-radius: 1rem;
+}
+
+.front-page {
+    display:none;
+}
+
+.time {
+    white-space: nowrap;
+    text-align: right;
+}
+
+.time * {
+    display: inline;
+}
+
+.answers {
+    font-size: 20px;
+    list-style-type: none;
+    text-align: left;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 10px 300px;
+    background-color: purple;
+    color: white;
+}
+
