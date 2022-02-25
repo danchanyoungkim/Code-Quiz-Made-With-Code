@@ -18,6 +18,46 @@ let multipleScores = [];
 let quizOptions = quiz[questionNumber].options;
 let numberOfQuestions = quiz.length;
 
+enterNameButton.addEventListener("click", enterInitials);
+
+// Function if they want to return to start page.
+function viewStartPage() {
+    viewScores.setAttribute("style", "display: inline;")
+    viewStart.setAttribute("style", "display: none;")
+    enterName.setAttribute("style", "display: none;");
+    startPage.setAttribute("style", "display: block;");
+    optionBoxes.setAttribute("style", "display: none");
+    scoresPage.setAttribute("style", "display: none;");
+    heading1.textContent = "JavaScript Coding Quiz";
+}
+// When user clicks submit, enter their score
+// and their initials to their local Storage
+enterNameButton.addEventListener("click", enterInitials);
+
+// Function if they want to go to score page.
+function viewAllScores() {
+    viewScores.setAttribute("style", "display: none;");
+    viewStart.setAttribute("style", "display: inline;");
+    heading1.textContent = "View All Scores";
+    enterName.setAttribute("style", "display: none;");
+    startPage.setAttribute("style", "display: none;");
+    optionBoxes.setAttribute("style", "display: none");
+    scoresPage.setAttribute("style", "display: block;");
+    scoresPage.innerHTML = "";
+
+    // Gets all stats for scores.
+    let scoreStat = window.localStorage.getItem("scores");
+    // Opposite of stringify.
+    let scoreStatObject = JSON.parse(scoreStat);
+
+    for (let i=0;i <= multipleScores.length - 1;i++){
+        let scoreInput = document.createElement("div");
+        scoreInput.setAttribute("class", "alert alert-warning");
+        scoreInput.innerHTML = "<div>" +  scoreStatObject[i].initials + ":</div> " + scoreStatObject[i].score;
+        scoresPage.appendChild(scoreInput);
+    }
+}
+
 function startQuiz() {
     // Once quiz starts, some displays will not be shown.
     viewScores.setAttribute("style", "display: none;");
@@ -158,52 +198,4 @@ function enterInitials(event) {
     heading1.textContent = "Score input complete! Would you like to retake the quiz?";
     enterName.setAttribute("style", "display: none;");
     optionBoxes.innerHTML = "";
-}
-
-// When user clicks submit, enter their score
-// and their initials to their local Storage
-enterNameButton.addEventListener("click", enterInitials);
-
-// Go back to start Menu
-function viewStartPage() {
-    viewStart.setAttribute("style", "display: none;")
-    viewScores.setAttribute("style", "display: inline;")
-    startPage.setAttribute("style", "display: block;");
-    scoresPage.setAttribute("style", "display: none;");
-    optionBoxes.setAttribute("style", "display: none");
-    enterName.setAttribute("style", "display: none;");
-    heading1.textContent = "JavaScript Coding Quiz";
-}
-
-// When user clicks submit, enter their score
-// and their initials to their local Storage
-enterNameButton.addEventListener("click", enterInitials);
-
-function viewAllScores() {
-    // Show the score menu with title
-    scoresPage.innerHTML = " ";
-    startPage.setAttribute("style", "display: none;");
-    scoresPage.setAttribute("style", "display: block;");
-    optionBoxes.setAttribute("style", "display: none");
-    enterName.setAttribute("style", "display: none;");
-    heading1.textContent = "View All Scores";
-    viewStart.setAttribute("style", "display: inline;");
-    viewScores.setAttribute("style", "display: none;");
-
-
-    // Grab the high scores from user's local storage
-    let highScoreList = window.localStorage.getItem("scores");
-    
-    // Convert the high scores from strings to an array of objects
-    let highScoreObject = JSON.parse(highScoreList);
-
-    // Cycle through the array and list each initial with 
-    // corresponding score as an element
-    for (let i=0;i <= multipleScores.length - 1;i++){
-        let highScoreEntry = document.createElement("div");
-        highScoreEntry.setAttribute("class", "alert alert-warning");
-        highScoreEntry.innerHTML = "<span style='font-weight: bold;''>" +  highScoreObject[i].initials + ":</span> " + highScoreObject[i].score;
-        scoresPage.appendChild(highScoreEntry);
-
-    }
 }
