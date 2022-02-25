@@ -52,7 +52,7 @@ function viewAllScores() {
 
     for (let i=0;i <= multipleScores.length - 1;i++){
         let scoreInput = document.createElement("div");
-        scoreInput.setAttribute("class", "alert alert-warning");
+        scoreInput.setAttribute("class", "results");
         scoreInput.innerHTML = "<div>" +  scoreStatObject[i].initials + ":</div> " + scoreStatObject[i].score;
         scoresPage.appendChild(scoreInput);
     }
@@ -126,7 +126,7 @@ function correctAnswer() {
 function incorrectAnswer() {
     let incorrect = document.createElement("div");
     optionBoxes.appendChild(incorrect);
-    alert("Incorrect!");
+    alert("Incorrect! 20 seconds deducted!");
 }
 
 // Event listener will react to answer chosen.

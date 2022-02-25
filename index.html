@@ -11,17 +11,17 @@
 <body>
   <div>
     <div>
-      <a href = "#" class = "view-scores" onclick = "viewAllScores()">Scores</a>
-      <a href = "#" class = "view-start" onclick = "viewStartPage()" style = "display: none;">Start Page</a>
+      <a href = "#" class = "view-scores" onclick = "viewAllScores()">Your Past Scores</a>
+      <a href = "#" class = "view-start" onclick = "viewStartPage()">Start Page</a>
     </div>
-      <div>Time: <div class = "quiz-timer">0</div>
+      <div class = "time">Time: <div class = "quiz-timer">0</div>
     </div>
   </div>
 
   <section>
     <main>
       <h1 class = "h1">JavaScript Coding Quiz</h1>
-      <div class = "enter-name" style = "display: none;">
+      <div class = "enter-name">
         <h3>Please enter your first letter of both first and last name!</h3>
         <div>
           <input class = "input" type = "text" name = "score"/><button class = "enter-name-button">Enter</button>
@@ -33,14 +33,14 @@
         <p><strong>20 seconds</strong> will be deducted for a wrong answer.</p> 
         <p>Remember, you will have <strong>100 seconds</strong> to complete this 5 question quiz!</p> 
         <p>Good luck!</p>
-        <button onclick = "startQuiz()">Start!</button>
+        <button class = "start-button" onclick = "startQuiz()">Start!</button>
       </div>    
       <div class = "option-boxes"></div>
       <div class = "scores-page"></div>
     </main>
   </section>
   
-  <script type= "text/javascript" src = "assets/js/question.js"></script>
+  <script type= "text/javascript" src = "./assets/js/question.js"></script>
   <script type= "text/javascript" src = "./assets/js/scripts.js"></script>
 </body>
 
