@@ -11,37 +11,37 @@
 <body>
   <div>
     <div>
-      <a href="#" id="high-scores-link" onclick="viewHighScores()">High Scores</a>
-      <a href="#" id="back-to-start-link" onclick="goBackToStart()" style="display: none;">Start Page</a>
+      <a href = "#" class = "view-scores" onclick = "viewAllScores()">Scores</a>
+      <a href = "#" class = "view-start" onclick = "viewStartPage()" style="display: none;">Start Page</a>
     </div>
-      <div id="game-clock-container">Time: <div id="game-clock">0</div>
+      <div>Time: <div class ="quiz-timer">0</div>
     </div>
   </div>
 
-  <div>
+  <section>
     <main>
-      <h1 id="heading1">JavaScript Coding Quiz</h1>
-      <div id="enter-initials-menu" style="display: none;">
+      <h1 class = "h1">JavaScript Coding Quiz</h1>
+      <div class = "enter-name" style="display: none;">
         <h3>Please enter your first letter of both first and last name!</h3>
-        <form>
-          <input id="initials-input" type="text" name="score"/><button id="submit-intials-btn">Enter</button>
-        </form>
+        <div>
+          <input class= "input" type="text" name="score"/><button class ="enter-name-button">Enter</button>
+        </div>
       </div>
-      <div id="start-menu">
+      <div class = "start-page">
         <p>Welcome to your first code quiz!</p>
         <p>This quiz will look into all you have reviewed in Chapter 1.</p>
-        <p><strong>15 seconds</strong> will be deducted for a wrong answer.</p> 
+        <p><strong>20 seconds</strong> will be deducted for a wrong answer.</p> 
         <p>Remember, you will have <strong>100 seconds</strong> to complete this 5 question quiz!</p> 
         <p>Good luck!</p>
         <button onclick="startQuiz()">Start!</button>
       </div>    
-      <div id="choices-menu"></div>
-      <div id="scores-menu"></div>
+      <div class = "option-boxes"></div>
+      <div class = "scores-page"></div>
     </main>
-  </div>
+  </section>
   
-  <script type="text/javascript" src = "./assets/js/script.js"></script>
   <script type="text/javascript" src = "assets/js/question.js"></script>
+  <script type="text/javascript" src = "./assets/js/script.js"></script>
 </body>
 
 </html>
