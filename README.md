@@ -1,5 +1,7 @@
 # Code-Quiz-Made-With-Code
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Link: https://danchanyoungkim.github.io/Code-Quiz-Made-With-Code/
 
 Description: Welcome to your first quiz for Javascript coding course 101! To start, press the link above and follow the instructions. This website for the quiz is made from mostly JavaScript with a touch of html and css. For such a simple type of website, there is actually a lot more going on in the js file. 
@@ -21,3 +23,8 @@ Figure 3: Once you finished your quiz, it will tell you your result! Your score 
 Figure 4: If you want to see your past result, you can and this figure shows what it looks like.
 
 <img width="1440" alt="Screen Shot 2022-02-25 at 12 56 12 AM" src="https://user-images.githubusercontent.com/97200280/155662400-93486fc5-2f5e-425c-8ddd-d924e258fd54.png">
+
+Tools Used
+* HTML
+* CSS
+* Javascript
