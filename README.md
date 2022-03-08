@@ -28,3 +28,5 @@ Tools Used
 * HTML
 * CSS
 * Javascript
+
+[Dan Kim](https://github.com/danchanyoungkim)
